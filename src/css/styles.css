@@ -16,3 +16,133 @@
 @import url('./badges.css');
 @import url('./back-link.css');
 @import url('./footer.css');
+
+
+/* Resetowanie stylów marginesów i paddingów */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Ogólne ustawienia dla strony */
+body {
+  font-family: 'Arial', sans-serif;
+  background-color: #f5f5f5;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+}
+
+/* Kontener dla zawartości */
+.container {
+  max-width: 1200px;
+  width: 100%;
+
+  margin: 0 auto;
+  padding: 20px;
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+/* Styl dla tytułu aplikacji */
+h1 {
+  font-size: 24px;
+  margin-bottom: 20px;
+}
+
+/* Formularz wyszukiwania */
+#search-form {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 20px;
+  gap: 10px;
+}
+
+#search-form input {
+  padding: 10px;
+  font-size: 16px;
+  width: 300px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+#search-form button {
+  padding: 10px 20px;
+  font-size: 16px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+#search-form button:hover {
+  background-color: #0056b3;
+}
+
+/* Styl dla galerii */
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 20px;
+}
+
+.gallery-item {
+  background-color: white;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  overflow: hidden;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  transition: box-shadow 0.3s ease;
+}
+
+.gallery-item:hover {
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Obraz w galerii */
+.gallery-item img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+
+/* Informacje o obrazie */
+.gallery-item .info {
+  padding: 10px;
+  font-size: 14px;
+  display: flex;
+  /* Ustawiamy flexbox, aby elementy były obok siebie */
+  justify-content: space-between;
+  /* Rozkładamy równomiernie elementy */
+  gap: 10px;
+  /* Dodajemy odstęp pomiędzy sekcjami */
+}
+
+.gallery-item .info p {
+  margin: 0;
+  /* Usuwamy marginesy */
+  color: #555;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  /* Centrujemy teksty w pionie */
+}
+
+.gallery-item .info p span {
+  font-weight: bold;
+  color: #333;
+}
+
+.hidden {
+  display: none;
+}
+
+#loader {
+  text-align: center;
+  padding: 20px;
+}
